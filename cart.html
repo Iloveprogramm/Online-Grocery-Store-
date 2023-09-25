@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart Page</title>
+    <link rel="stylesheet" href="cart-styles.css" />
+    <link rel="stylesheet" href="HeaderAndFooter.css" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="#home">
+        <img src="./image/logo.png" alt="Online Grocery shopping" />
+        <h1>Online Grocery Store</h1>
+      </a>
+    </div>
+    <a class="Homebtn" href="Home.php">Back to Home page</a>
+    <h1>Shopping Cart</h1>
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>Product Images</th>
+          <th>Product Name</th>
+          <th>Unit price</th>
+          <th>Quantity</th>
+          <th>Total Price</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <h2>Total Price $: <span id="total-price">0</span></h2>
+    <button id="checkout-button">Checkout</button>
+    <button id="clear-cart-button">Clear Cart</button>
+    <p class="info-text">
+      Hint:After clicking "Submit an order," the cart will be locked, and you
+      won't be able to add any more items until the order is finished.
+    </p>
+    <script src="cart-scripts.js"></script>
+
+    <script>
+      document.getElementById("checkout-button").addEventListener("click", function (event)
+      {
+          event.preventDefault();
+          const totalPrice = parseFloat(totalPriceElement.innerText);
+          if (totalPrice === 0)
+          {
+            alert("Your cart is empty. Please add items to your cart before checking out.");
+            return;
+          }
+          localStorage.setItem("cartLocked", "true");
+          localStorage.setItem("total-price", totalPrice);
+          window.location.href = "checkout.html";
+        });
+    </script>
+
+    <footer>
+      <p>
+        &copy; 2023 UTS Online Grocery Shopping. All Rights Reserved. Created by
+        Chenjun Zheng Student Number: 14208603
+      </p>
+    </footer>
+    
+  </body>
+</html>

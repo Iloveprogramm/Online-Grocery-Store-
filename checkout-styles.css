@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+form {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-row .form-group {
+  width: 48%;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.PlaceOrderButton {
+  display: block;
+  width: 100%;
+  background-color: #080808;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.PlaceOrderButton:hover {
+  background-color: #3e8e41;
+}
+
+input:invalid {
+  border: 2px solid red;
+  border-width: 1px;
+}
+
+input:valid {
+  border: 2px solid green;
+  border-width: 3px;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 14px;
+}
+
+select {
+  appearance: none;
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 8px 10px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}

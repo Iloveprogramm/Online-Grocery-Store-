@@ -1,0 +1,365 @@
+.footer-message {
+  font-size: 220px;
+  color: #ffffff;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #cecbcb 0%, #ffffff 100%);
+  padding: 20px;
+  color: white;
+  width: 2340px;
+}
+
+.header-navbar-container
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.header h1 {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 40px;
+  color: #0c0c0c;
+  vertical-align: middle;
+}
+
+.header img {
+  display: inline-block;
+  max-height: 100px;
+  border-radius: 10%;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.navbar {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  width: 230px;
+  background: #e6e7e9;
+  height: 100%;
+  overflow: auto;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar li a {
+  display: block;
+  color: #080808;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 28px;
+}
+
+.navbar li a:hover {
+  background-color: #66b5da;
+  color: white;
+  padding-left: 32px;
+}
+
+.navbar li a.unavailable-item {
+  color: #d1cece;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.sub-menu {
+  display: none;
+  /*list-style-type: none; */
+  padding: 0;
+  margin-top: 8px;
+  background-color: #7e99b9;
+  border-radius: 0 0 10px 10px;
+}
+
+.sub-menu li a {
+  padding-left: 32px;
+}
+
+.has-submenu > a::after {
+  content: " ▼";
+  font-size: 12px;
+}
+
+.main {
+  margin-left: 200px;
+  padding: 16px;
+  overflow-y: auto;
+  height: calc(100vh - 40px);
+}
+
+.home-btn {
+  background-color: #080808;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  color: #f8eded;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.home-btn:hover {
+  background-color: #3e8e41;
+}
+
+.shopping-cart {
+  display: block;
+  position: fixed;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  padding: 20px;
+  z-index: 1000;
+  max-height: 700px;
+  resize: both;
+  right: 150px;
+  bottom: 20px;
+  width: 800px;
+  height: 400px;
+}
+
+.shopping-cart h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: #121010;
+  font-weight: bold;
+  border-bottom: 2px solid #1cac78;
+  padding-bottom: 8px;
+}
+
+.shopping-cart .product {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.shopping-cart .product:hover {
+  background-color: #e6e6e6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.open-cart {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #080808;
+  color: #fff;
+  border: none;
+  padding: 16px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: all 0.3s;
+}
+
+.open-cart:hover {
+  background-color: #ffffff;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cart-icon {
+  width: 50px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.main-content {
+  margin-top: 80px;
+  padding-left: 200px;
+  padding-right: 50px;
+  overflow-y: auto;
+  height: calc(100vh - 80px);
+  margin-bottom: 50px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 50px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.3s ease;
+  width: 400px;
+  padding: 0 16px;
+  height: auto;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.hint-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+.button-css {
+  background-color: #161616;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 10px 2px;
+  border-radius: 5px;
+}
+
+.button-css:hover {
+  background-color: #45a049;
+}
+
+.button-css:active {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(1px);
+}
+
+.has-submenu-level2 > a::after {
+  content: " ▼";
+  font-size: 12px;
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+
+.has-submenu-level2 > a.expanded::after {
+  transform: rotate(90deg);
+}
+
+.submenu-level2 {
+  background-color: #a3d9ff;
+  color: #1a1a1a;
+}
+
+.submenu-level2:hover {
+  background-color: #82b9e0;
+  color: #ffffff;
+}
+
+.search-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-group input {
+  margin-right: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+}
+
+#search-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #080808;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-right: 1rem;
+}
+
+#search-btn:hover {
+  background-color: #3e8e41;
+}
+
+.click-hint {
+  color: rgb(226, 80, 80);
+  font-size: 20px;
+  text-align: center;
+}
+
+.addtocart {
+  background-color: #080808;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 10px 2px;
+  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+}
+
+.addtocart:hover {
+  background-color: #45a049;
+}
+
+.addtocart:active {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(1px);
+}
+
+.remove-item-container {
+  position: relative;
+  left: 50px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.disabled-btn {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+

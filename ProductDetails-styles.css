@@ -1,0 +1,60 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.disabled-btn {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+
+.ProductDetailBtn {
+  background-color: #080808;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 10px 2px;
+  border-radius: 5px;
+}
+
+.ProductDetailBtn:hover {
+  background-color: #45a049;
+}
+
+.product-details {
+  display: flex;
+}
+
+.product-details img {
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 4px;
+  margin-right: 500px;
+}
+
+.product-details h2 {
+  font-size: 50px;
+  margin: 10px 0;
+  color: #400ff1;
+}
+
+.product-details p {
+  font-size: 25px;
+}
+
+.Product-Description h3 {
+  font-size: 25px;
+  color: #400ff1;
+}
+
+.Product-Description p {
+  font-size: 20px;
+}

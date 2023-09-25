@@ -1,0 +1,33 @@
+.header {
+  background-color: #c2bfbf;
+  padding: 20px;
+  text-align: center;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.header h1 {
+  display: inline;
+  font-size: 40px;
+  color: #0c0c0c;
+  vertical-align: middle;
+}
+
+.header img {
+  max-height: 100px;
+  border-radius: 10%;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+footer {
+  background-color: #c2bfbf;
+  padding: 5px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
